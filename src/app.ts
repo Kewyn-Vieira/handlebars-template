@@ -1,5 +1,5 @@
-// Require express for the server application
-var express = require('express')
+import express, { Request, Response } from "express";
+
 var app = express()
 
 // Get devMode variable
@@ -23,7 +23,7 @@ if(devMode)
 
 
 // Redirect to /home on root
-app.get('/', (req, res) =>
+app.get('/', (req: Request, res: Response) =>
 {
     res.status(308).redirect('/home')
 })

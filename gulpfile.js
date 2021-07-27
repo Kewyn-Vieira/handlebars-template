@@ -29,9 +29,31 @@ gulp.task('processJs', () =>
 })
 
 // processTs
-
+var babel = require('gulp-babel');
+var browserify = require('gulp-browserify');
+var ts = require('gulp-typescript');
+gulp.task('processTs', () =>
+{
+    return gulp.src('./src/**/*.ts')
+    .pipe(ts({
+        "target": "es6",
+        "esModuleInterop": true,
+        "moduleResolution": 'node'
+    }))
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    /*
+    .pipe(browserify({
+      insertGlobals : true,
+    }))
+    */
+    .pipe(minifyJs())
+    .pipe(gulp.dest('dist'))
+})
 
 // copyImgs
+
 gulp.task('copyImgs', () =>
 {
     return gulp.src('./src/**/*.{gif,jpg,png,svg,ico}')
@@ -49,6 +71,7 @@ gulp.task('watch', () =>
     gulp.watch('./src/**/*.js', gulp.series('processJs'))
 
     // ts
+    gulp.watch('./src/**/*.ts', gulp.series('processTs'))
 
     // css
     gulp.watch('./src/**/*.css', gulp.series('processCss'))
@@ -67,6 +90,7 @@ gulp.task('run', gulp.series([
 
     // js
     'processJs',
+<<<<<<< HEAD
 
     // ts
 
@@ -76,6 +100,9 @@ gulp.task('run', gulp.series([
     // scss
 
     // imgs
+=======
+    'processTs',
+>>>>>>> 2fa918e (Gulp can compile ts, converted js files to ts)
     'copyImgs'
 ]))
 
