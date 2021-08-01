@@ -30,7 +30,6 @@ gulp.task('processJs', () =>
 
 // processTs
 var babel = require('gulp-babel');
-var browserify = require('gulp-browserify');
 var ts = require('gulp-typescript');
 gulp.task('processTs', () =>
 {
@@ -43,11 +42,6 @@ gulp.task('processTs', () =>
     .pipe(babel({
         presets: ['@babel/env']
     }))
-    /*
-    .pipe(browserify({
-      insertGlobals : true,
-    }))
-    */
     .pipe(minifyJs())
     .pipe(gulp.dest('dist'))
 })
@@ -90,9 +84,9 @@ gulp.task('run', gulp.series([
 
     // js
     'processJs',
-<<<<<<< HEAD
 
     // ts
+    'processTs',
 
     // css
     'processCss', 
@@ -100,9 +94,6 @@ gulp.task('run', gulp.series([
     // scss
 
     // imgs
-=======
-    'processTs',
->>>>>>> 2fa918e (Gulp can compile ts, converted js files to ts)
     'copyImgs'
 ]))
 
