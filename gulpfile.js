@@ -5,6 +5,13 @@ var uglifyCss = require('gulp-uglifycss');
 
 
 // processHandlebars
+gulp.task('processHbs', () =>
+{
+    return gulp
+    .src('./src/**/*.hbs')
+    .pipe(uglifyCss())
+    .pipe(gulp.dest('./dist'))
+})
 
 
 // processCss
@@ -44,6 +51,7 @@ gulp.task('watch', () =>
     // html
 
     // hbs
+    gulp.watch('./src/**/*.hbs', gulp.series('processHbs'))
 
     // js
     gulp.watch('./src/**/*.js', gulp.series('processJs'))
@@ -64,6 +72,7 @@ gulp.task('run', gulp.series([
     // html
 
     // hbs
+    'processHbs',
 
     // js
     'processJs',

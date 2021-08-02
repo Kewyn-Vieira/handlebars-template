@@ -2,5 +2,5 @@
 {
     width: 100%;
     min-height: 64px;
-    background-color: skyblue;
+    background-color: var(--color-secondary);
 }

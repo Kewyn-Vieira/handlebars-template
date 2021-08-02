@@ -1,6 +1,6 @@
 .page-footer
 {
-    background-color: skyblue;
+    background-color: var(--color-secondary);
 }
 
 .footer-div
@@ -14,9 +14,10 @@
 .footer-div p
 {
     margin: 0;
+    text-align: center;
 }
 
 .footer-text a
 {
-    color: black;
+    color: var(--color-tertiary);
 }

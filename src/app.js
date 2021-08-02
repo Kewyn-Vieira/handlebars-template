@@ -20,7 +20,15 @@ if(devMode)
     app.use(require('connect-livereload')());
 
 // Template engine config
-
+var hbs = require("express-handlebars").create(
+{
+    layoutsDir:`${__dirname}/layouts`,
+    partialsDir:`${__dirname}/partials`,
+    extname:"hbs"
+});
+app.engine("hbs", hbs.engine)
+app.set("view engine","hbs")
+app.set("views",`${__dirname}`)
 
 // Redirect to /home on root
 app.get('/', (req, res) =>

@@ -5,6 +5,8 @@
 @import url('/partials/footer/index.css');
 
 /* Styles */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
 body
 {
     height: 100vh;
@@ -15,7 +17,7 @@ body
     overflow: hidden;
 
     color: var(--color-tertiary);
-    font-family: monospace;
+    font-family: 'Quicksand', cursive;
     font-display: swap;
     background-color: var(--color-primary);
 }

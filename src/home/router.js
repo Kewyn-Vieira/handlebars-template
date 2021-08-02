@@ -7,9 +7,9 @@ var functions = require('../functions')
 router.get('/', (req, res) =>
 {
     // Without template
-    res.status(200).send("<p style='font-family: monospace'>Choose a template language and merge it with your branch to display your content.<p>")
 
     // With template
+    res.status(200).render(`${__dirname}/index`, {layout: 'main'})
     
 })
 
