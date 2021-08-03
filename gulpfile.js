@@ -55,7 +55,7 @@ gulp.task('watch', () =>
     // css
 
     // scss
-    gulp.watch(['./src/**/*.scss', '!./src/**/_*.scss'], gulp.series('processSass'))
+    gulp.watch('./src/**/*.scss', gulp.series('processSass'))
 
     // imgs
     gulp.watch('./src/**/*.{gif,jpg,png,svg,ico}', gulp.series('copyImgs'))
