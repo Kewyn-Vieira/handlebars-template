@@ -12,6 +12,11 @@
     color: var(--color-secondary);
 }
 
+.footer-text
+{
+    margin: 0;
+}
+
 .footer-text a
 {
     color: var(--color-secondary);
