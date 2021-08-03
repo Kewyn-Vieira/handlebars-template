@@ -25,6 +25,7 @@
     "gulp-babel": "^8.0.0",
     "gulp": "^4.0.2",
     "gulp-terser": "^2.0.1",
+    "gulp-uglifycss": "^1.1.0",
     "install": "^0.13.0",
     "livereload": "^0.9.3",
     "npm": "^7.20.1",
