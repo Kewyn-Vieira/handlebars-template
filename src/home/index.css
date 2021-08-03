@@ -36,7 +36,3 @@ body
     width: auto;
     margin-bottom: 16px;
 }
-
-/* Importing here to avoid merge conflicts */
-@import url('/partials/header/index.css');
-@import url('/partials/footer/index.css');
