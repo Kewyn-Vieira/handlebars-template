@@ -30,7 +30,7 @@ app.get('/', (req: Request, res: Response) =>
 
 // Require routers
 var home = require('./home/router')
-var partials = require('./partials/router')
+import partials from './partials/router'
 
 // Use routers
 // Setting '/home' as a route and assigning home router to deal with requests
