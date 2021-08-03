@@ -22,4 +22,4 @@ router.get('/res/logo.png', (req: Request, res: Response) =>
     functions.sendFile(res, `${__dirname}/res/logo.png`)
 })
 
-module.exports = router
+export default router

@@ -29,7 +29,7 @@ app.get('/', (req: Request, res: Response) =>
 })
 
 // Require routers
-var home = require('./home/router')
+import home from './home/router'
 import partials from './partials/router'
 
 // Use routers
