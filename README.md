@@ -85,6 +85,11 @@ Install modules → Open a terminal in your root folder and use:
 	`$ npm i`
 </br>
 
+Build files → Open a terminal in your root folder and use:
+</br>
+	`$ npm run build`
+</br>
+
 Start the server → After installing the modules, use:
 </br>
 	`$ npm run dev`
