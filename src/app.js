@@ -44,7 +44,7 @@ app.use(function(req, res) {
 
 // Get Ipv4 address to host to LAN and a random port
 var host = require('os').networkInterfaces().Ethernet[1].address
-var port = '8080'
+var port = 3000
 
 // Call listen function to activate the server
 app.listen(port, host, () =>

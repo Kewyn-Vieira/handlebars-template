@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/app.js",
-    "dev": "npm-run-all -p build start-dev-server watch",
-    "build": "gulp",
+    "dev": "npm-run-all -p build-dev start-dev-server watch",
+    "build": "gulp run",
+    "build-dev": "gulp",
     "start-dev-server": "nodemon dist/app.js -e html,css,js,hbs --devMode=true",
     "watch": "livereload ./dist -e html,css,js,hbs"
   },
